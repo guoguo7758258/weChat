@@ -1,0 +1,31 @@
+/* pages/address/xiugai/xiugai.wxss */
+.public_style{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e9e9e9;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  padding: 0rpx 25rpx;
+  box-sizing: border-box;
+}
+input{
+  height: 100%;
+}
+.public_style image{
+  float: right;
+  width:36rpx;
+  height:36rpx;
+  margin-top: 26rpx;
+}
+.save_address{
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 35rpx;
+  color: #ffffff;
+  line-height: 100rpx;
+  background: #e8340e;
+}
+.detail_address{
+  height: 200rpx;
+}

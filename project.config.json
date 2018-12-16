@@ -1,0 +1,99 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx0dd00a1aebf86728",
+	"projectname": "weChat",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": 0,
+					"name": "list",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "catePhone",
+					"pathName": "pages/mall/catePhone/catePhone",
+					"query": "id=668&name=Z17S  "
+				},
+				{
+					"id": 2,
+					"name": "cateAcc",
+					"pathName": "pages/mall/cateAcc/cateAcc",
+					"query": "id=31&name=保护壳"
+				},
+				{
+					"id": 3,
+					"name": "detail",
+					"pathName": "pages/detail/detail",
+					"query": "id=702"
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "address_list",
+					"pathName": "pages/address/address_list/address_list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "xiugai",
+					"pathName": "pages/address/xiugai/xiugai",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "new_address",
+					"pathName": "pages/address/new_address/new_address",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,58 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <view class='big-wrap'wx:if="{{cartList !=''}}">
+  <view class='product-wrap'
+    wx:for='{{cartList}}'
+    wx:key='{{item.id}}'
+    data-id='{{item.id}}'
+    bindtouchstart='onTouchStart'
+    bindtouchmove='onTouchMove'
+    style="left:{{currentId===item.id ? left:0}}rpx;"
+    >
+    <view class='select'>
+      <label>
+        <checkbox
+        catchtap='singelChecked'
+        checked="{{item.isChecked}}"
+        data-id='{{item.id}}'
+        ></checkbox>
+      </label>
+    </view>
+    <view class='wrap-left'>
+      <view class='product-img'><image src='{{item.img}}'></image></view>
+    </view>
+    <view class='wrap-right'>
+      <view class='right-top'>
+        <view class='product-title'>{{item.title}}</view>
+      </view>
+      <view class='right-bottom'>
+        <view class='product-price'>售价：￥{{item.price}} 元</view>
+        <view class='product-button'>
+          <text class='numReduce' catchtap='numReduce' data-id='{{item.id}}'>-</text>
+          <text class='product-num'>{{item.count}}</text>
+          <text class='numAdd' catchtap='numAdd' data-id='{{item.id}}'>+</text>
+        </view>
+      </view>
+    </view>
+    <view class='delete-product' catchtap='handelDelet'data-id='{{item.id}}'>删除</view>
+  </view>
+</view>
+  <view class='footer' wx:if="{{cartList !=''}}">
+    <view class='select-all'>
+      <label> 
+        <checkbox catchtap='handelAllChecked'
+        checked="{{isAllChecked === true ? 'checked' : ''}}"
+      >
+      </checkbox>全选
+      </label>
+    </view>
+    <view class='footer-right'>
+      <view class='price-all'>总计:<text>￥{{isCheckedPrice}}</text></view>
+      <view class='go-jiesuan'>去结算({{isCheckedCount}})</view>
+    </view>
+  </view>
+  <view class='nullCart'wx:else bindtap='goBuy'>
+    <text class='nullCartTitleOne'>主人，我要饿死啦</text>
+    <text class='nullCartTitleTwo'>快去买点小鱼干吧</text>
+  </view>
+</view>

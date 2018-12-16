@@ -1,0 +1,69 @@
+<!--pages/detail/detail.wxml-->
+<view>
+<!-- 轮播图 -->
+<view class='banner'>
+  <view class="page-section page-section-spacing swiper">
+    <swiper
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{banner_img}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class='image'>
+            <image src="{{item.url}}" class="slide-image"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+<!-- 商品介绍 -->
+<view class='miaoshu-box'>
+  <view class='title'>
+  <image src='http://img6.lukou.com/js/img/taobao.98caa5a.png' class='taobao'></image>
+  <image src="//img6.lukou.com/js/img/baoyou.20f74bf.png" class='baoyou'></image>
+  {{share.title}}</view>
+  <view class='bottom'>
+    <text class='new-price'>
+    <image src="http://img6.lukou.com/js/img/quan.574de0f.png"></image>
+    <text class='new-head'>￥  </text>{{detail.price}}</text>
+    <view>
+    <text class='old-price'>原价<text class='old-head'>￥{{detail.originPrice}}</text></text>
+    <text class='sale-num'>月销量:  {{detail.saleNum}}</text>
+    </view>
+  </view>
+</view>
+<!-- 推荐 -->
+  <view class="recomment" wx:if="{{recommendList!=''}}">
+    <text class='recomment-title'>为您推荐</text>
+    <view class='big-wrap'>
+      <view class='recomment-wrap'>
+        <navigator class='mini-wrap' wx:for='{{recommendList}}' wx:key="item.id" url='../detail/detail?id={{item.id}}'>
+          <view class='recomment-img'url="../pages/detail/detail">
+            <image src='//oss.static.nubia.cn/{{item.imageurl}}'></image>
+          </view>
+          <view class='recomment-name'>{{item.product_name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 商品详细介绍 -->
+<view class='detail_more'>
+  <view class='detail_more_title'><text>————  淘宝图文详情  ————</text></view>
+  <image src='{{item.photo.url}}' wx:for="{{detail_img}}" wx:key="{{index}}"></image>
+</view>
+<!-- 底部购买 -->
+<view class='footer'>
+  <view class='cart' catchtap='goCart'>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544269072150&di=6460aab6720e8c8370c95983bff79490&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fdesign%2F00%2F57%2F93%2F24%2F58facdf0a69a0.png'></image>
+    <text class='cart-num' wx:if="{{product_num !=0}}">{{product_num}}</text>
+  </view>
+  <view class='buy-it'>立即购买</view>
+  <view class='add-cart'
+    catchtap="addCart"
+    data-id='{{detail.id}}'
+    data-title='{{detail.title}}'
+    data-price='{{detail.price}}'
+    data-img='{{detail.image}}'
+    >加入购物车</view>
+</view>

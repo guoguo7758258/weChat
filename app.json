@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mall/cateAcc/cateAcc",
+    "pages/mall/catePhone/catePhone",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/address/address_list/address_list",
+    "pages/address/new_address/new_address",
+    "pages/address/xiugai/xiugai",
+    "pages/components/list-item/list-item"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "扣脚大王",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "selectedColor": "#ff4d4d",
+    "color":"#515151",
+    "list":[{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "source/icon/index.png",
+      "selectedIconPath": "source/icon/index-selected.png"
+    },{
+      "pagePath": "pages/list/list",
+      "text": "列表",
+      "iconPath": "source/icon/list.png",
+      "selectedIconPath": "source/icon/list-selected.png"
+    },{
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "source/icon/cart.png",
+      "selectedIconPath": "source/icon/cart-selected.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "source/icon/mine.png",
+      "selectedIconPath": "source/icon/mine-selected.png"
+    }]
+  }
+}

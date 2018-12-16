@@ -1,0 +1,13 @@
+<view>
+  <view class='nick_name public_style'><input placeholder="收货人姓名"/></view>
+  <view class='phone_number public_style'><input placeholder="手机号码"/></view>
+  <view class='big_address public_style'>
+    <image src='../../../../source/icon/right.png'></image>
+  </view>
+  <view class='small_address public_style'>
+   <image src='../../../../source/icon/right.png'></image>
+  </view>
+  <view class='address_number public_style'><input placeholder="邮政编码"/></view>
+  <view class='detail_address public_style'><input placeholder="详细地址"/></view>
+  <view class='save_address'>保存</view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/mall/mall.wxml-->
+<view>
+  <view class='title-wrap'>
+    <view class='title'>
+      <view class='product-spices' catchtap='hidePhoneSpices'>{{title}}</view>
+      <view class='new-solt'>最新上架</view>
+      <view class='price-solt'>价位</view>
+    </view>
+    <view class="spices-wrap {{isShow? 'ishidden':'isshow'}}">
+      <view class="phone-spices" data-id='{{}}' data-text='全部机型' catchtap='addTitle'> 全部机型 </view>
+      <view class="phone-spices"
+        wx:for='{{allPhone}}'
+        wx:key='item.product_id'
+        data-id='{{item.product_id}}'
+        catchtap='addTitle'
+        data-text='{{item.name}}'
+      >
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  <navigator class='product-list' wx:for='{{phoneList}}' wx:key='{{item.sid}}' url='/pages/detail/detail?id={{item.sid}}'>
+    <view class='product-img'>
+      <image src='//oss.static.nubia.cn/{{item.image}}'></image>
+    </view>
+    <view class='product-title'>
+      <text>{{item.product_name}}  </text>
+      <text>{{item.color_name}}   </text>
+      <text>{{item.spec_value}}   </text>
+    </view>
+    <view class='small' wx:if="{{item.product_point !=''}}">{{item.product_point}}</view>
+    <view class='product-price'>
+      <text>{{item.price}}元</text>
+      <text wx:if="{{item.price < item.origin_price}}" class="origin_price">{{item.origin_price}}元</text>
+    </view>
+  </navigator> 
+</view>

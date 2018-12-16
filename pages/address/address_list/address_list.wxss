@@ -1,0 +1,62 @@
+/* pages/address/address_list/address_list.wxss */
+/* pages/address/address.wxss */
+.address_box{
+  width: 100%;
+  height: 250rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 15rpx solid #e9e9e9;
+}
+.top{
+  height: 70rpx;
+  display: flex;
+  padding: 0rpx 20rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+.nick_name{
+  flex: 1;
+}
+.center{
+  width: 100%;
+  height: 60rpx;
+  font-size: 28rpx;
+  line-height: 30rpx;
+  padding: 0rpx 20rpx;
+}
+.bottom{
+  width: 100%;
+  border-top: 2rpx dotted #ccc;
+  height: 100rpx;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding:0rpx 15rpx;
+}
+.select_address{
+  flex: 1.5;
+  font-size: 28rpx;
+}
+.operate{
+  flex: 1.5;
+  display: flex;
+}
+.operate button{
+  display: inline-block;
+  margin-left: 30rpx;
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 25rpx;
+}
+.new_address{
+  width: 100%;
+  height: 100rpx;
+  background: #e8340e;
+  font-size: 35rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+}

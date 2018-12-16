@@ -1,0 +1,22 @@
+<view>
+  <view class='address_box'>
+    <view class='top'>
+      <view class='nick_name'>郭大侠</view>
+      <view class='phone_number'>13028115620</view>
+    </view>
+    <view class='center'>xxxxxxxxx</view>
+    <view class='bottom'>
+      <view class='select_address'>
+        <label>
+          <checkbox></checkbox>
+          设为默认地址
+        </label>
+      </view>
+      <view class='operate'>
+        <button catchtap='handelBianjiAddress'>编辑</button>
+        <button catchtap='handelDelet'>删除</button>
+      </view>
+    </view>
+  </view>
+  <view class='new_address' catchtap='handelNewAddress'>新增收获地址</view>
+</view>

@@ -1,0 +1,114 @@
+<!--pages/index/index.wxml-->
+<!-- <view wx:for="{{list}}" wx:key="index">
+{{item.title}}
+</view> -->
+<view class='banner'>
+  <view class="page-section page-section-spacing swiper">
+    <swiper
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <navigator url='/pages/detail/detail?id={{item.id}}'>
+            <image src="//oss.static.nubia.cn/{{item.small_image}}" class="slide-image"/>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+<!-- <view class='nav'>
+  <view class='nav-tips'>
+    <view>
+      <icon type="success" size="10" color='#e5e5e5'/>
+      官方商城
+    </view>
+    <view>
+      <icon type="success" size="10" color='#e5e5e5'/>
+      正品保障
+    </view>
+    <view>
+      <icon type="success" size="10" color='#e5e5e5'/>
+      售后无忧
+    </view>
+  </view>
+  <view class='icon-nav'>
+    <view class='nav-wrap'>
+      <image src='https://res.vmallres.com/pimages//squaredInfo/icon/20181129/xEXkSzWMA7sRWE5fKtiv.png' />
+      <span>华为专区</span>
+    </view>
+    <view class='nav-wrap'>
+      <image src='https://res.vmallres.com/pimages//squaredInfo/icon/20181129/5QNSQPi6sXdSW7IrWWrz.png' />
+      <span>荣耀专区</span>
+    </view>
+    <view class='nav-wrap'>
+      <image src='https://res.vmallres.com/pimages//squaredInfo/icon/20181129/8qx438t5AltkNN9ALy8O.png' />
+      <span>领券中心</span>
+    </view>
+    <view class='nav-wrap'>
+      <image src='https://res.vmallres.com/pimages//squaredInfo/icon/20181129/msDbNntELcxQndEBsJKW.png' />
+      <span>数码惠</span>
+    </view>
+    <view class='nav-wrap'>
+      <image src='https://res.vmallres.com/pimages//squaredInfo/icon/20181129/wLWp6NBULUeViM5vtWPT.png' />
+      <span>拼团</span>
+    </view>
+  </view>
+</view> -->
+<view class='recommend'>
+  <view>
+    <navigator class="recommend-first" wx:for="{{banner_bottom_one}}" wx:key="{{index}}" url='/pages/detail/detail?id={{item.id}}'>
+      <image src="//oss.static.nubia.cn/{{item.small_image}}"/>
+    </navigator>
+  </view>
+  <view>
+    <navigator wx:for="{{banner_bottom_two}}" wx:key="{{index}}" url='/pages/detail/detail?id={{item.id}}'>
+      <image src="//oss.static.nubia.cn/{{item.small_image}}"/>
+    </navigator>
+    <navigator wx:for="{{banner_bottom_three}}" wx:key="{{index}}" url='/pages/detail/detail?id={{item.id}}'>
+      <image src="//oss.static.nubia.cn/{{item.small_image}}"/>
+    </navigator>
+  </view>
+</view>
+<view class='special'>
+  <view class='all-title'>热销机型</view>
+  <view class="products-wrap">
+    <navigator wx:for="{{hot_products_one}}" wx:key="{{index}}" class="products-top" url='/pages/detail/detail?id={{item.id}}'>
+      <image src='//oss.static.nubia.cn/{{item.small_image}}'></image>
+    </navigator>
+  <view class='list-wrap'>
+    <navigator wx:for="{{hot_products_two}}" wx:key="{{index}}" class="products-list"url='/pages/detail/detail?id={{item.id}}'>
+      <view><image src='//oss.static.nubia.cn/{{item.small_image}}'/></view>
+      <view>{{item.title}}</view>
+      <!-- <text>{{item.sub_title}}</text> -->
+      <view>
+        <text>￥{{item.block_products.price}}元</text>
+        <text>|</text>
+        <text>{{item.block_products.original_price}}</text>
+      </view>
+    </navigator>
+  </view>
+    <view class='see-more' bindtap='seeMore'>查看更多商品</view>
+  </view>
+</view>
+<view class='special'>
+  <view class='all-title'>精选配件</view>
+  <view class="products-wrap">
+    <navigator wx:for="{{ peijian_products_one}}" wx:key="{{index}}" class="products-top" url='/pages/detail/detail?id={{item.id}}'>
+      <image src='//oss.static.nubia.cn/{{item.small_image}}'></image>
+    </navigator>
+  <view class='list-wrap'>
+    <navigator wx:for="{{ peijian_products_two}}" wx:key="{{index}}" class="products-list" url='/pages/detail/detail?id={{item.id}}'>
+      <view><image src='//oss.static.nubia.cn/{{item.small_image}}'/></view>
+      <view>{{item.title}}</view>
+      <!-- <text>{{item.sub_title}}</text> -->
+      <view>
+        <text>￥{{item.block_products.price}}元</text>
+        <text>|</text>
+        <text>{{item.block_products.original_price}}</text>
+      </view>
+    </navigator>
+  </view>
+    <view class='see-more' bindtap='seeMore'>查看更多商品</view>
+  </view>
+</view> 

@@ -1,0 +1,56 @@
+<view>
+  <view class='login_logout'>
+    <view class='user_img'>
+      <image src='{{avatarUrl}}'></image>
+    </view>
+    <view class='login'>{{nickName}}</view>
+    <!-- <view class='logout'>注销</view> -->
+  </view>
+  <view class='youhui-box'>
+    <view>
+      <text>0</text>
+      <text>优惠券</text>
+    </view>
+    <view>
+      <text>￥0.00</text>
+      <text>回收代金券</text>
+    </view>
+    <view>
+      <text>0</text>
+      <text>收藏</text>
+    </view>
+    <view>
+      <text>0</text>
+      <text>牛豆</text>
+    </view>
+  </view>
+  <view class='order-box'>
+    <view class='all-order'>全部订单 <image src='../../source/icon/right.png'></image></view>
+    <view class='bottom-box'>
+      <view>
+        <image src='https://oss.static.nubia.cn/upload/59c0c094a248a53.png'></image>
+        <text>待付款</text>
+      </view>
+      <view>
+        <image src='https://oss.static.nubia.cn/upload/59c0c094a99ad35.png'></image>
+        <text>待收货</text>
+      </view>
+      <view>
+        <image src='https://oss.static.nubia.cn/upload/59c0c094a9c9851.png'></image>
+        <text>已完成</text>
+      </view>
+    </view>
+  </view>
+  <view class='mine-box order-box'>
+    <view class='all-order' catchtap='goAddress'>收货地址<image src='../../source/icon/right.png'></image></view>
+    <view class='all-order'>我的预约<image src='../../source/icon/right.png'></image></view>
+    <view class='all-order'>我的回收订单<image src='../../source/icon/right.png'></image></view>
+    <view class='all-order'>我的NB码<image src='../../source/icon/right.png'></image></view>
+    <view class='all-order'>我的流量卡<image src='../../source/icon/right.png'></image></view>
+  </view>
+  <view class='service-box order-box'>
+    <view class='all-order'>服务网点<image src='../../source/icon/right.png'></image></view>
+    <view class='all-order'>常见问题<image src='../../source/icon/right.png'></image></view>
+    <view class='all-order'>联系客服<image src='../../source/icon/right.png'></image></view>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<!--pages/list/list.wxml-->
+<view>
+  <view class='list-title'>红魔竞技手机</view>
+  <view class='list'>
+    <navigator class='list-wrap' wx:for="{{redPhone}}" wx:key="{{item.product_id}}" url='/pages/detail/detail?id={{item.product_id}}'>
+      <view>
+        <image src='//oss.static.nubia.cn/{{item.image_id}}'/>
+      </view>
+      <view>{{item.product_name}}</view>
+    </navigator>
+  </view>
+  <view class='list-title'>手机</view>
+  <view class='list'>
+    <navigator class='list-wrap' wx:for="{{catePhone}}" wx:key="{{item.product_id}}" url='/pages/mall/catePhone/catePhone?id={{item.product_id}}&name={{item.product_name}}'>
+      <view>
+        <image src='//oss.static.nubia.cn/{{item.image_id}}'/>
+      </view>
+      <view>{{item.product_name}}</view>
+    </navigator>
+  </view>
+  <view class='list-title'>配件</view>
+  <view class='list'>
+    <navigator class='list-wrap' wx:for="{{cateAcc.result}}" wx:key="{{item.cate_id}}" url='/pages/mall/cateAcc/cateAcc?&id={{item.cate_id}}&name={{item.cate_name}}'>
+      <view>
+        <image src='//oss.static.nubia.cn/{{item.image_id}}'/>
+      </view>
+      <view>{{item.cate_name}}</view>
+    </navigator>
+  </view>
+  <view class='list-title'>周边产品</view>
+  <view class='list'>
+    <navigator class='list-wrap' wx:for="{{cateZb}}" wx:key="{{item.product_id}}" url='/pages/detail/detail?id={{item.product_id}}'>
+      <view>
+        <image src='//oss.static.nubia.cn/{{item.image_id}}'/>
+      </view>
+      <view>{{item.product_name}}</view>
+    </navigator>
+  </view>
+</view>
